@@ -1,6 +1,11 @@
-<ol>
-  <% @restaurants.each do |restaurant| %>
-    <li> <%= link_to restaurant.name, restaurant_path(restaurant) %> </li>
-  <% end %>
-</ol>
-<%= link_to "Add a restaurant", new_restaurant_path %>
+<div class="container p-4 d-flex justify-content-center">
+  <div>
+    <h1>Try these amazing restaurants!</h1>
+    <ol>
+      <% @restaurants.each do |restaurant| %>
+        <li> <%= link_to restaurant.name, restaurant_path(restaurant) %> </li>
+      <% end %>
+    </ol>
+    <%= link_to "Add a restaurant", new_restaurant_path, class: "btn btn-primary" %>
+  </div>
+</div>
